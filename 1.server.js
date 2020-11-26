@@ -20,8 +20,9 @@ app.use(ctx => {
   console.log(ctx.request.path)
   console.log(ctx.url) // ctx.request.url
 
-  ctx.response.body = 'hello' // res.end()
   ctx.body = '111' // 这个方法只是给ctx.body赋予值
+  ctx.response.body = 'hello' // res.end()
+
 })
 app.listen(8080, () => {
   console.log('server start 8080')

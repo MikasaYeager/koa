@@ -50,9 +50,9 @@ class Application extends EventEmitter {
       // 其实用promise包裹的主要原因是为了能捕获错误并且能生成一个promise
       // 不过只能捕获同步错误
       try {
-        Promise.resolve(middleware(ctx, () => dispatch(i + 1)))
+        return Promise.resolve(middleware(ctx, () => dispatch(i + 1)))
       } catch (error) {
-        Promise.reject(error)
+        return Promise.reject(error)
       }
     }
     // 如果第一次执行的dispatch()返回值是一个promise
