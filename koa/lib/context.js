@@ -14,7 +14,6 @@ function defineGetter (target, key) {
 
 function defineSetter (target, key) {
   proto.__defineSetter__(key, function (value) {
-    console.log('key: ', key)
     this[target][key] = value
   })
 }
