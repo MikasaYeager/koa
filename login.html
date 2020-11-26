@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="/login" method="post" enctype="multipart/form-data">
+    <input type="text" name="username" />
+    <input type="text" name="password" />
+    <input type="file" name="avatar" multiple>
+    <button>提交</button>
+  </form>
+
+  <script>
+        // const xhr = new XMLHttpRequest();
+        // xhr.open('POST','/login',true);
+        // xhr.setRequestHeader('Content-Type','application/json')
+        // xhr.onload = function () {
+        //     console.log(xhr.response)
+        // }
+        // xhr.send(JSON.stringify({a:1,b:2}));
+  </script>
+</body>
+
+</html>
