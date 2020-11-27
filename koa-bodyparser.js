@@ -80,6 +80,9 @@ Buffer.prototype.split = function (bondary) {
   return arr
 }
 
+// body里面需要ctx和uploadDir
+// 但这两个参数不可能在一个函数里面获得,因为ctx是中间件里面的,uploadDir需要用户传
+// 所以这时候就需要高阶函数,即返回一个函数的函数,外层函数传入uploadDir,返回的函数作为中间件传入ctx
 module.exports = function bodyParser (uploadDir) {
   return async (ctx, next) => {
     ctx.request.body = await body(ctx, uploadDir)
